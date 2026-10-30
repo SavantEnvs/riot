@@ -1,0 +1,9 @@
+project: savantenvs/riot
+target: fuzzing_uri_parser
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzzing_uri_parser/testsuite
+cmds:
+  - cmd: /mayhem/fuzzing_uri_parser
+    afl: true
+    timeout: 5

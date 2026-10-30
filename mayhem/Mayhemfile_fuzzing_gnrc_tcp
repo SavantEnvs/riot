@@ -1,0 +1,9 @@
+project: savantenvs/riot
+target: fuzzing_gnrc_tcp
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzzing_gnrc_tcp/testsuite
+cmds:
+  - cmd: /mayhem/fuzzing_gnrc_tcp
+    afl: true
+    timeout: 5

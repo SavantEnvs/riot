@@ -1,0 +1,9 @@
+project: savantenvs/riot
+target: fuzzing_gcoap
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzzing_gcoap/testsuite
+cmds:
+  - cmd: /mayhem/fuzzing_gcoap
+    afl: true
+    timeout: 5
