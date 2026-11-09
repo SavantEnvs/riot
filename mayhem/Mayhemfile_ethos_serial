@@ -1,0 +1,10 @@
+project: savantenvs/riot
+target: ethos_serial-mined-66a6eab
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/ethos_serial-mined-66a6eab/testsuite
+cmds:
+  - cmd: /mayhem/ethos_serial
+    afl: true
+    timeout: 5
+    max_length: 16384
