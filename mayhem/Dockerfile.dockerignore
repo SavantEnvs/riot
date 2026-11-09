@@ -1,0 +1,14 @@
+# Build context for the commit image: the FULL repo including .git (the grader needs the history), minus
+# generated build outputs. RIOT writes them to <app>/bin/<board>/; the tracked cpu/*/bin and dist/**/bin
+# directories are source, so only the board output directories are listed.
+**/bin/native
+**/bin/native32
+**/bin/native64
+**/*.o
+**/*.a
+**/*.so
+**/*.elf
+**/__pycache__/
+.DS_Store
+**/*.swp
+**/*~

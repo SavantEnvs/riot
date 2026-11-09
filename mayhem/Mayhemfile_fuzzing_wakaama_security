@@ -1,0 +1,9 @@
+project: savantenvs/riot
+target: fuzzing_wakaama_security-mined-1496277
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzzing_wakaama_security-mined-1496277/testsuite
+cmds:
+  - cmd: /mayhem/fuzzing_wakaama_security
+    afl: true
+    timeout: 5
